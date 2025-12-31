@@ -12,7 +12,7 @@ const featuredInsights = [
     description:
       'Step-by-step strategies for navigating the Australian market, from initial search to closing the deal successfully.',
     readTime: '10 min read',
-    image: '/buy-business.png',
+    image: '/buy-business.webp',
     slug: 'buy-business-australia-guide',
   },
   {
@@ -33,7 +33,7 @@ const popularNews = [
     description:
       'Learn exactly what to look for in financial records, legal documents, and operational metrics before signing any contracts.',
     readTime: '10 min read',
-    image: '/guide.png',
+    image: '/guide.webp',
     slug: 'ultimate-due-diligence-guide',
   },
 

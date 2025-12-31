@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://axiumbusinessbuyers.com.au/blog/ultimate-due-diligence-guide',
     images: [
       {
-        url: '/guide.png',
+        url: '/guide.webp',
         width: 1200,
         height: 630,
         alt: 'The Ultimate Due Diligence Guide When Buying A Business In Australia',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'The Ultimate Due Diligence Guide When Buying A Business In Australia',
     description:
       'The ultimate due diligence guide for buying a business in Australia.',
-    images: ['/guide.png'],
+    images: ['/guide.webp'],
   },
 };
 
@@ -49,7 +49,7 @@ export default function BlogDetailPage() {
     headline: post.title,
     description:
       'The ultimate due diligence guide for buying a business in Australia. Learn how to verify financials, legal risks, and operational viability.',
-    image: 'https://axiumbusinessbuyers.com.au/guide.png',
+    image: 'https://axiumbusinessbuyers.com.au/guide.webp',
     datePublished: post.publishedAt,
     author: {
       '@type': 'Organization',
@@ -80,7 +80,7 @@ export default function BlogDetailPage() {
       <article className='mx-auto px-4 sm:px-6 md:px-8 py-12 max-w-7xl'>
         <div className='relative w-full aspect-21/9 rounded-md overflow-hidden mb-6 md:mb-12 bg-muted'>
           <Image
-            src='/guide.png'
+            src='/guide.webp'
             alt={post.title}
             width={1400}
             height={600}

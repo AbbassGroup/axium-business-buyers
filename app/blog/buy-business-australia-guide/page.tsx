@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: 'https://axiumbusinessbuyers.com.au/blog/buy-business-australia-guide',
     images: [
       {
-        url: '/buy-business.png',
+        url: '/buy-business.webp',
         width: 1200,
         height: 630,
         alt: 'How to Buy a Business in Australia',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'How to Buy a Business in Australia: A Complete Strategic Guide',
     description:
       'A comprehensive guide for serious buyers on how to buy a business in Australia.',
-    images: ['/buy-business.png'],
+    images: ['/buy-business.webp'],
   },
 };
 
@@ -47,7 +47,7 @@ export default function BlogDetailPage() {
     headline: post.title,
     description:
       'A comprehensive guide for serious buyers on how to buy a business in Australia. Learn about strategy, valuation, due diligence, and deal structuring.',
-    image: 'https://axiumbusinessbuyers.com.au/buy-business.png',
+    image: 'https://axiumbusinessbuyers.com.au/buy-business.webp',
     datePublished: post.publishedAt,
     author: {
       '@type': 'Organization',
@@ -78,7 +78,7 @@ export default function BlogDetailPage() {
       <article className='mx-auto px-4 sm:px-6 md:px-8 py-12 max-w-7xl'>
         <div className='relative w-full aspect-21/9 rounded-md overflow-hidden mb-6 md:mb-12 bg-muted'>
           <Image
-            src='/buy-business.png'
+            src='/buy-business.webp'
             alt={post.title}
             width={1400}
             height={600}
