@@ -91,6 +91,26 @@ const Footer = () => {
                 provide expert guidance from initial search through to
                 settlement.
               </p>
+
+              {/* Social Media Links */}
+              <div className='flex items-center gap-4 mt-6'>
+                <Link
+                  href='https://www.instagram.com/axiumbusinessbuyers'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 hover:bg-secondary hover:text-secondary-foreground transition-all duration-300'
+                >
+                  <Instagram className='w-5 h-5' />
+                </Link>
+                <Link
+                  href='https://www.facebook.com/axiumbusinessbuyers'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 hover:bg-secondary hover:text-secondary-foreground transition-all duration-300'
+                >
+                  <Facebook className='w-5 h-5' />
+                </Link>
+              </div>
             </div>
 
             {/* Newsletter */}
