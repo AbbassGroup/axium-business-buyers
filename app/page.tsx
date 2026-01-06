@@ -17,7 +17,7 @@ export default function Home() {
         <ProcessSteps />
         <WhoWeWorkWith />
         <WhyChoose />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <BlogSection />
         <ContactForm />
       </Lenis>
