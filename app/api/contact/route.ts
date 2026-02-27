@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: Number(process.env.EMAIL_PORT),
-      secure: false, 
+      secure: false,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -78,17 +78,40 @@ export async function POST(req: Request) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    const emailPromise = transporter.sendMail(mailOptions);
+
+    const apiPromise = fetch(
+      'https://api.nexartechnologies.com/api/v1/deals/create/integration',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `${name}`,
+          stage: 'Enquiry',
+          businessUnit: 'Axium',
+          office: 'Head Office',
+          phone,
+          email,
+          industry,
+          budget,
+          timeline,
+        }),
+      },
+    );
+
+    await Promise.all([emailPromise, apiPromise]);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
       { error: 'Failed to send email' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
